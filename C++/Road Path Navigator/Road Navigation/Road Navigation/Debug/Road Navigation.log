@@ -1,0 +1,14 @@
+﻿  Node.cpp
+e:\github repository\programming\c++\road path navigator\road navigation\road navigation\node.cpp(7): warning C4553: '==': operator has no effect; did you intend '='?
+e:\github repository\programming\c++\road path navigator\road navigation\road navigation\node.cpp(8): warning C4553: '==': operator has no effect; did you intend '='?
+e:\github repository\programming\c++\road path navigator\road navigation\road navigation\node.cpp(9): warning C4553: '==': operator has no effect; did you intend '='?
+e:\github repository\programming\c++\road path navigator\road navigation\road navigation\node.cpp(20): warning C4553: '==': operator has no effect; did you intend '='?
+e:\github repository\programming\c++\road path navigator\road navigation\road navigation\node.cpp(30): warning C4553: '==': operator has no effect; did you intend '='?
+e:\github repository\programming\c++\road path navigator\road navigation\road navigation\node.cpp(41): warning C4553: '==': operator has no effect; did you intend '='?
+  Map.cpp
+  Generating Code...
+  Compiling...
+  RoadNavigation.cpp
+  Generating Code...
+  Road Navigation.vcxproj -> E:\Github Repository\Programming\C++\Road Path Navigator\Road Navigation\Debug\Road Navigation.exe
+  Road Navigation.vcxproj -> E:\Github Repository\Programming\C++\Road Path Navigator\Road Navigation\Debug\Road Navigation.pdb (Partial PDB)
