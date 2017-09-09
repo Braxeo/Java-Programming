@@ -1,7 +1,19 @@
 package main
 
-import "Atom-First-project/main/Extension"
+import "fmt"
 
 func main() {
-	Extension.Extend()
+
+	i := 0
+
+	for {
+		i++
+		if i%2 == 0 {
+			continue
+		}
+		fmt.Println(i)
+		if i >= 100 {
+			break
+		}
+	}
 }
