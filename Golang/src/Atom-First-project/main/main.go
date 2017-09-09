@@ -4,16 +4,17 @@ import "fmt"
 
 func main() {
 
-	i := 0
-
-	for {
-		i++
-		if i%2 == 0 {
-			continue
-		}
-		fmt.Println(i)
-		if i >= 100 {
-			break
-		}
+	switch "Hello, World!" {
+	case "Hi world":
+		fmt.Println("Hi world")
+	case "Hello, hi!":
+		fmt.Println("Hello, hi!")
+	case "Hello, World!":
+		fmt.Println("Hellow, World!")
+	case "Hello World":
+		fmt.Println("Hello world!")
+	default:
+		fmt.Println("Default")
 	}
+
 }
