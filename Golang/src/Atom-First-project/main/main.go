@@ -4,17 +4,14 @@ import "fmt"
 
 func main() {
 
-	switch "Hello, World!" {
-	case "Hi world":
-		fmt.Println("Hi world")
-	case "Hello, hi!":
-		fmt.Println("Hello, hi!")
-	case "Hello, World!":
-		fmt.Println("Hellow, World!")
-	case "Hello World":
-		fmt.Println("Hello world!")
-	default:
-		fmt.Println("Default")
+	test := func(first ...int) float64 {
+		var counter int
+		for _; x := range first{
+
+			}
+		}
+		return float64(first)
 	}
 
+	fmt.Println(test(52))
 }
