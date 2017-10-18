@@ -1,31 +1,41 @@
 package main
 
-import "fmt"
+/*
+Use https://godoc.org/sort to sort the following
 
-type Square struct {
-	WLength float64
-	HLength float64
-}
+(1)
+type people []string
+studyGroup := people{"Zeno", "John", "Al", "Jenny"}
 
-type Triangle struct {
-	BLength float64
-	HLength float64
-}
+(2)
+s := []string{"Zeno", "John", "Al", "Jenny"}
 
-func (s Square) area() float64 {
-	return s.HLength * s.WLength
-}
+(3)
+n := []int{7, 4, 8, 2, 9, 19, 12, 32, 3}
 
-func (s Triangle) area() float64 {
-	return 0.5 * s.BLength * s.HLength
-}
+Also sort the above in reverse order
+*/
 
-type Shape interface {
-	area() float64
-}
+import (
+	"fmt"
+	"sort"
+)
 
 func main() {
-	sq := Square{10, 50}
-	x := sq.area()
-	fmt.Println(x)
+	type people []string
+	studyGroup := people{"Zeno", "John", "Al", "Jenny"}
+	sort.Strings(studyGroup)
+	fmt.Println(studyGroup)
+	sort.Sort(sort.Reverse(sort.StringSlice(studyGroup)))
+	fmt.Println(studyGroup)
+	s := []string{"Zeno", "John", "Al", "Jenny"}
+	sort.Strings(s)
+	fmt.Println(s)
+	sort.Sort(sort.Reverse(sort.StringSlice(s)))
+	fmt.Println(s)
+	n := []int{7, 4, 8, 2, 9, 19, 12, 32, 3}
+	sort.Ints(n)
+	fmt.Println(n)
+	sort.Sort(sort.Reverse(sort.IntSlice(n)))
+	fmt.Println(n)
 }
