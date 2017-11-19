@@ -1,9 +1,9 @@
 package Extension
 
 import (
-  "fmt"
+	"fmt"
 )
 
-func Extend(){
-  fmt.Println("Hello from Extend func")
+func extend() {
+	fmt.Println("Hello from Extend func")
 }

@@ -1,0 +1,35 @@
+<img src="{{ person.profile_picture }}">
+
+<h1>{{person.name}}</h1>
+
+
+<ul>
+  <li>  {{ person.name }} = {{ person.email}}  </li>
+
+
+  {% for item in person.item_set.all %}
+  <li>  {{ item.name }}'s weight = {{item.weight}} </li>
+  {% endfor %}
+
+
+  {% if error_message %}
+    <p><strong>{{ error_message}}</strong></p>
+  {% endif %}
+</ul>
+
+<form action="{% url 'favourite' person.id %}" method="post">
+  {% csrf_token %}
+  {% for item in person.item_set.all %}
+    <input type="radio" id="item{{forloop.counter}}" name="item" value="{{ item.id}}"/>
+    <label> for="item{{forloop.counter}}"
+      {{ item.name}}
+
+      {% if item.is_favourite %}
+        <img src="https://www.gpspower.net/images/icons/Favourite.png" />
+      {% endif %}
+
+    </label><br />
+  {% endfor %}
+
+  <input type="submit" value="Favourite"/>
+</form>
