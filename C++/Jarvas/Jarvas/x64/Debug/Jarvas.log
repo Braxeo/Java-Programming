@@ -1,0 +1,25 @@
+﻿  video_stream.cpp
+  main.cpp
+  face_recog.cpp
+e:\github repository\programming\c++\jarvas\jarvas\face_recog.cpp(43): error C3861: 'read_csv': identifier not found
+e:\github repository\programming\c++\jarvas\jarvas\face_recog.cpp(58): error C2065: 'FaceRecognizer': undeclared identifier
+e:\github repository\programming\c++\jarvas\jarvas\face_recog.cpp(58): error C2923: 'cv::Ptr': 'FaceRecognizer' is not a valid template type argument for parameter 'T'
+e:\github repository\programming\c++\jarvas\jarvas\face_recog.cpp(58): error C3861: 'createFisherFaceRecognizer': identifier not found
+e:\github repository\programming\c++\jarvas\jarvas\face_recog.cpp(58): error C2514: 'cv::Ptr': class has no constructors
+  e:\opencv\build\include\opencv2\core\cvstd.hpp(262): note: see declaration of 'cv::Ptr'
+e:\github repository\programming\c++\jarvas\jarvas\face_recog.cpp(59): error C2678: binary '->': no operator found which takes a left-hand operand of type 'cv::Ptr' (or there is no acceptable conversion)
+  e:\opencv\build\include\opencv2\core\cvstd.hpp(370): note: could be 'T *cv::Ptr<T>::operator ->(void) const'
+  e:\github repository\programming\c++\jarvas\jarvas\face_recog.cpp(59): note: while trying to match the argument list '(cv::Ptr)'
+e:\github repository\programming\c++\jarvas\jarvas\face_recog.cpp(59): error C2039: 'train': is not a member of 'cv::Ptr'
+  e:\opencv\build\include\opencv2\core\cvstd.hpp(262): note: see declaration of 'cv::Ptr'
+e:\github repository\programming\c++\jarvas\jarvas\face_recog.cpp(73): error C2534: 'face_recog': constructor cannot return a value
+  e:\github repository\programming\c++\jarvas\jarvas\face_recog.h(4): note: see declaration of 'face_recog'
+e:\github repository\programming\c++\jarvas\jarvas\face_recog.cpp(73): error C2562: 'face_recog::face_recog': 'void' function returning a value
+  e:\github repository\programming\c++\jarvas\jarvas\face_recog.cpp(21): note: see declaration of 'face_recog::face_recog'
+e:\github repository\programming\c++\jarvas\jarvas\face_recog.cpp(108): error C2678: binary '->': no operator found which takes a left-hand operand of type 'cv::Ptr' (or there is no acceptable conversion)
+  e:\opencv\build\include\opencv2\core\cvstd.hpp(370): note: could be 'T *cv::Ptr<T>::operator ->(void) const'
+  e:\github repository\programming\c++\jarvas\jarvas\face_recog.cpp(108): note: while trying to match the argument list '(cv::Ptr)'
+e:\github repository\programming\c++\jarvas\jarvas\face_recog.cpp(108): error C2039: 'predict': is not a member of 'cv::Ptr'
+  e:\opencv\build\include\opencv2\core\cvstd.hpp(262): note: see declaration of 'cv::Ptr'
+e:\github repository\programming\c++\jarvas\jarvas\face_recog.cpp(119): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  Generating Code...
