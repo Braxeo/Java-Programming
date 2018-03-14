@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Fragments</string>
+    <string name="brandonTextString">Hello</string>
+    <string name="brandonButtonString">Click me Hoss</string>
+    <string name="dank_meme_bro">Dank Meme Bro</string>
+    <string name="bottom_text">Bottom Text</string>
+    <string name="top_text">Top Text</string>
+</resources>
