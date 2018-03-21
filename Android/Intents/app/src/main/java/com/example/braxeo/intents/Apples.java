@@ -1,5 +1,6 @@
 package com.example.braxeo.intents;
 
+import android.app.Service;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
@@ -12,6 +13,8 @@ public class Apples extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apples);
+        Intent i = new Intent(this, MyService.class);
+        startService(i);
     }
 
     public void onClick(View view){
