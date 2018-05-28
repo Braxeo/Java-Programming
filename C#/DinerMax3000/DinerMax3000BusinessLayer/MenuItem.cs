@@ -8,8 +8,8 @@ namespace DinerMax3000.Business
 {
     public class MenuItem
     {
-        public string Title;
-        public string Description;
+        public string Title { get; set; }
+        public string Description { get; set; }
         public double Price
         {
             // returns the price.
@@ -23,7 +23,7 @@ namespace DinerMax3000.Business
                 }
                 else
                 {
-                    throw new ApplicationException("You cannot have free or negative valued items.");
+                    throw new ApplicationException("You cannot have free or negative valued Items.");
                 }
             }
         }

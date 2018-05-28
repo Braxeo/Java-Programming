@@ -7,6 +7,35 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DinerMax3000Console", "Dine
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DinerMax3000BusinessLayer", "DinerMax3000BusinessLayer\DinerMax3000BusinessLayer.csproj", "{63C37B40-3CA8-41A8-A1EB-23FC4C3B81B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DinerMax3000WPFClient", "DinerMax3000WPFClient\DinerMax3000WPFClient.csproj", "{D891938F-186D-4F8D-A2B9-08855A6943B3}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DinerMax3000Web", "DinerMax3000Web\", "{8BBE0E7D-6E69-485B-8314-D4D5143D454D}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		ProjectReferences = "{63c37b40-3ca8-41a8-a1eb-23fc4c3b81b0}|DinerMax3000BusinessLayer.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_65131"
+		Debug.AspNetCompiler.PhysicalPath = "DinerMax3000Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_65131\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_65131"
+		Release.AspNetCompiler.PhysicalPath = "DinerMax3000Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_65131\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "65131"
+		SlnRelativePath = "DinerMax3000Web\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DinerMax3000Services", "DinerMax3000Services\DinerMax3000Services.csproj", "{60E80071-7F0E-4C84-A00D-3DECE6A9D226}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DinerMax3000UnitTests", "DinerMax3000UnitTests\DinerMax3000UnitTests.csproj", "{8F13EB1D-DF48-4B06-9066-B0E3DD4E7FAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +50,22 @@ Global
 		{63C37B40-3CA8-41A8-A1EB-23FC4C3B81B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63C37B40-3CA8-41A8-A1EB-23FC4C3B81B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63C37B40-3CA8-41A8-A1EB-23FC4C3B81B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D891938F-186D-4F8D-A2B9-08855A6943B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D891938F-186D-4F8D-A2B9-08855A6943B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D891938F-186D-4F8D-A2B9-08855A6943B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D891938F-186D-4F8D-A2B9-08855A6943B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BBE0E7D-6E69-485B-8314-D4D5143D454D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BBE0E7D-6E69-485B-8314-D4D5143D454D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BBE0E7D-6E69-485B-8314-D4D5143D454D}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BBE0E7D-6E69-485B-8314-D4D5143D454D}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{60E80071-7F0E-4C84-A00D-3DECE6A9D226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60E80071-7F0E-4C84-A00D-3DECE6A9D226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60E80071-7F0E-4C84-A00D-3DECE6A9D226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60E80071-7F0E-4C84-A00D-3DECE6A9D226}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F13EB1D-DF48-4B06-9066-B0E3DD4E7FAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F13EB1D-DF48-4B06-9066-B0E3DD4E7FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F13EB1D-DF48-4B06-9066-B0E3DD4E7FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F13EB1D-DF48-4B06-9066-B0E3DD4E7FAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

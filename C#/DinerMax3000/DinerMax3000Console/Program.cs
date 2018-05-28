@@ -23,7 +23,7 @@ namespace DinerMax3000Console
 
             foreach (Menu currentMenu in menusFromDatabase)
             {
-                foreach (MenuItem currentItem in currentMenu.items)
+                foreach (MenuItem currentItem in currentMenu.Items)
                 {
                     hungryGuestOrder.items.Add(currentItem);
                 }
