@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using System.IO;
+using System.Drawing;
 
 namespace ShoppingForm
 {
@@ -12,13 +13,24 @@ namespace ShoppingForm
         public ShoppingListDisplay()
         {
             InitializeComponent();
-            shoppinglist = new ShoppingListObj.ShoppingList();
-            
+            // Adjust to HighContrast if needed
+            SetColorScheme();
+            Microsoft.Win32.SystemEvents.UserPreferenceChanged 
+                += new Microsoft.Win32.UserPreferenceChangedEventHandler(this.UserPreferenceChanged);
+
             // Adding methods to Event variables
             CheckItem += OnItemInput;
             MouseCheck += onMouseMovement;
+
+            shoppinglist = new ShoppingListObj.ShoppingList();
+            EnableEvent = false;
         }
 
+        // High Contrast Event
+        public void UserPreferenceChanged(object sender, Microsoft.Win32.UserPreferenceChangedEventArgs args)
+        {
+            SetColorScheme();
+        }
         // Click Events
         private void button2_Click(object sender, EventArgs e)
         {
@@ -56,10 +68,21 @@ namespace ShoppingForm
         // Mouse Events
         private void ShoppingListDisplay_MouseMove(object sender, MouseEventArgs e)
         {
-            // Comment out this statement to stop background Color changing
-            // if it gets annoying.
-            this.BackColor = MouseCheck(this, new ColorArgs { color = this.BackColor });
+            if (EnableEvent)
+            {
+                this.BackColor = MouseCheck(this, new ColorArgs { color = this.BackColor });
+            }
         }
+        // HighContrast Color Scheme
+        private void SetColorScheme()
+        {
+            if (System.Windows.Forms.SystemInformation.HighContrast)
+            {
+                this.BackColor = SystemColors.Window;
+                this.ForeColor = SystemColors.WindowText;
+            }
+        }
+
 
         // "Keyboard shortcuts" for Save, Load and Exit
         private void ShoppingListDisplay_KeyUp(object sender, KeyEventArgs e)
@@ -133,10 +156,20 @@ namespace ShoppingForm
         // Event 2 Definition
         static System.Drawing.Color onMouseMovement(object sender, ColorArgs args)
         {
-            return System.Drawing.Color.FromArgb(args.color.ToArgb() + 1);
+            if (!System.Windows.Forms.SystemInformation.HighContrast)
+            {
+                return System.Drawing.Color.FromArgb(args.color.ToArgb() + 1);
+            }
+            else
+            {
+                return args.color;
+            }
         }
-        
 
-        
+        // Enable/Disable Event 2
+        private void ToggleEvent_Click(object sender, EventArgs e)
+        {
+            EnableEvent = !EnableEvent;
+        }
     }
 }

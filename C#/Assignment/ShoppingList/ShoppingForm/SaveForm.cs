@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using System.IO;
+using System.Drawing;
 
 namespace ShoppingForm
 {
@@ -15,7 +16,29 @@ namespace ShoppingForm
         public SaveForm(ShoppingListObj.ShoppingList list)
         {
             InitializeComponent();
+            
+            // Adjust to HighContrast if needed
+            SetColorScheme();
+            Microsoft.Win32.SystemEvents.UserPreferenceChanged
+                += new Microsoft.Win32.UserPreferenceChangedEventHandler(this.UserPreferenceChanged);
+
             this.list = list;
+        }
+
+        // High Contrast Event
+        public void UserPreferenceChanged(object sender, Microsoft.Win32.UserPreferenceChangedEventArgs args)
+        {
+            SetColorScheme();
+        }
+
+        // HighContrast Color Scheme
+        private void SetColorScheme()
+        {
+            if (System.Windows.Forms.SystemInformation.HighContrast)
+            {
+                this.BackColor = SystemColors.Window;
+                this.ForeColor = SystemColors.WindowText;
+            }
         }
 
         // Save button clicked
@@ -29,6 +52,11 @@ namespace ShoppingForm
                 MessageBox.Show("Created");
                 this.Close();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
         
     }
